@@ -7,12 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'descontos',
-    loadChildren: () => import('./descontos/descontos.module').then( m => m.DescontosPageModule)
-  },
-  {
     path: 'conta',
     loadChildren: () => import('./conta/conta.module').then( m => m.ContaPageModule)
+  },
+  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
+  },
+  {
+    path: 'success',
+    loadChildren: () => import('./success/success.module').then( m => m.SuccessPageModule)
   }
 ];
 @NgModule({

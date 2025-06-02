@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-title>Carrinho</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- 1. Morada de entrega -->
+  <ion-card class="delivery-address">
+    <ion-card-header>
+      <ion-card-title>Morada de Entrega</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Rua das Flores, nº 123<br />
+      Porto, Portugal
+    </ion-card-content>
+  </ion-card>
+
+  <!-- 2. Título dos pedidos -->
+  <h2 class="section-title">Os teus pedidos</h2>
+
+  <!-- Lista de itens do carrinho -->
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems" class="cart-item">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price | currency:'EUR' }}</p>
+      </ion-label>
+      <ion-button fill="clear" color="medium" (click)="removeItem(item)">
+        Remover
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- 3. Cupão de desconto -->
+<div class="coupon-section">
+  <h3 class="coupon-title">Cupão de Desconto</h3>
+  <ion-button
+    class="coupon-button"
+    (click)="applyCoupon()"
+  >
+    Selecionar Desconto
+    <ion-icon slot="end" name="pricetag-outline"></ion-icon>
+  </ion-button>
+</div>
+
+  <!-- 4. Método de pagamento -->
+  <h2 class="section-title">Método de Pagamento</h2>
+  <div class="payment-methods">
+    <img src="assets/mbway.png" alt="Mbway" />
+    <img src="assets/multibanco.webp" alt="MultiBanco" />
+  </div>
+
+  <!-- 5. Total -->
+  <ion-card class="totals-card">
+    <ion-card-content>
+      <div class="total-line">
+        <span>Total:</span>
+        <strong>{{ total | currency:'EUR' }}</strong>
+      </div>
+      <div class="total-line" *ngIf="discount > 0">
+        <span>Total com desconto:</span>
+        <strong>{{ (total - discount) | currency:'EUR' }}</strong>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- 6. Botão confirmar pedido -->
+  <ion-button expand="block" class="app-color" (click)="checkout()">
+    Confirmar Pedido
+  </ion-button>
+
+</ion-content>
+
