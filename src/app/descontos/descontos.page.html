@@ -1,13 +1,43 @@
 <ion-header>
-  <ion-toolbar style="--background: #ffffff; --color: #000000;">
+  <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button fill="clear" color="medium" (click)="voltar()">
-        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
-      </ion-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-
-    <ion-title style="text-align: center; font-size: 18px; font-weight: bold;">
-      Descontos
-    </ion-title>
+    <ion-title>Descontos</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-searchbar
+    placeholder="Pesquisar descontos"
+    (ionInput)="onSearchChange($event)"
+    debounce="300"
+  ></ion-searchbar>
+
+  <ion-list *ngIf="!isLoading">
+    <div *ngFor="let discount of filteredDiscounts" class="card-wrapper">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img
+            [src]="discount.image"
+            alt="discount image"
+            onerror="this.src='assets/placeholder.jpg'"
+          />
+        </ion-thumbnail>
+        <ion-label>
+          {{ discount.title }}
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <div *ngIf="isLoading" class="loading-spinner">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
+  <div *ngIf="!isLoading && filteredDiscounts.length === 0" class="no-results">
+    Nenhum desconto encontrado.
+  </div>
+</ion-content>
+
+
