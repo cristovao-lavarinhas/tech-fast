@@ -1,0 +1,20 @@
+.splash-screen {
+  --background: #a50d18;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 220px;
+    }
+  }
+}
+

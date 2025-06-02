@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Pans & Company",
+    "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29SgtzzFYTk5XzONFVQcjLlECUqe43Lh44A&s",
+    "classificacao": 4.4,
+    "duracao": "20-30 min"
+  },
+  {
+    "nome": "Burger King",
+    "imagem": "https://play-lh.googleusercontent.com/LajmY4cNQiCJ1xmLt-BoJjG-ChCmZncapS0KR2PzwB-8UeypsKMH4RYfw36xi-MXSj2b",
+    "classificacao": 4.6,
+    "duracao": "25-35 min"
+  },
+  {
+    "nome": "Lidl",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/800px-Lidl-Logo.svg.png",
+    "classificacao": 4.3,
+    "duracao": "15-25 min"
+  }
+]

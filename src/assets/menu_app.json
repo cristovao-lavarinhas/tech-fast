@@ -1,0 +1,312 @@
+{
+  "pizzas": [
+    {
+      "brand": "Pizza Hut",
+      "items": [
+        {
+          "name": "Pepperoni Lover's",
+          "description": "Pizza com extra pepperoni e queijo derretido.",
+          "price": 12.99,
+          "image": "https://example.com/pizzahut/pepperoni-lovers.jpg"
+        },
+        {
+          "name": "Supreme",
+          "description": "Pepperoni, salsicha, pimentão, cebola e azeitonas.",
+          "price": 13.99,
+          "image": "https://example.com/pizzahut/supreme.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Telepizza",
+      "items": [
+        {
+          "name": "Barbecue Chicken",
+          "description": "Frango, molho barbecue, queijo e cebola.",
+          "price": 11.50,
+          "image": "https://example.com/telepizza/barbecue-chicken.jpg"
+        },
+        {
+          "name": "Carbonara",
+          "description": "Bacon, cogumelos, cebola e molho branco.",
+          "price": 12.00,
+          "image": "https://example.com/telepizza/carbonara.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Domino's",
+      "items": [
+        {
+          "name": "Extravaganzza",
+          "description": "Pepperoni, presunto, salsicha, cogumelos, cebola, pimentão e azeitonas.",
+          "price": 14.00,
+          "image": "https://example.com/dominos/extravaganzza.jpg"
+        },
+        {
+          "name": "Veggie Lovers",
+          "description": "Pimentão, cebola, tomate, cogumelos e azeitonas.",
+          "price": 12.50,
+          "image": "https://example.com/dominos/veggie-lovers.jpg"
+        }
+      ]
+    }
+  ],
+  "hamburgers": [
+    {
+      "brand": "McDonald's",
+      "items": [
+        {
+          "name": "Big Mac",
+          "description": "Dois hambúrgueres, alface, queijo, molho especial, cebola e picles.",
+          "price": 5.99,
+          "image": "https://example.com/mcdonalds/big-mac.jpg"
+        },
+        {
+          "name": "McChicken",
+          "description": "Frango empanado, alface e maionese.",
+          "price": 4.99,
+          "image": "https://example.com/mcdonalds/mcchicken.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Burger King",
+      "items": [
+        {
+          "name": "Whopper",
+          "description": "Hambúrguer grelhado, alface, tomate, cebola, picles e molho.",
+          "price": 6.50,
+          "image": "https://example.com/bk/whopper.jpg"
+        },
+        {
+          "name": "Chicken Royale",
+          "description": "Frango empanado com alface e maionese em pão comprido.",
+          "price": 5.50,
+          "image": "https://example.com/bk/chicken-royale.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "KFC",
+      "items": [
+        {
+          "name": "Zinger Burger",
+          "description": "Frango picante, alface e maionese.",
+          "price": 5.99,
+          "image": "https://example.com/kfc/zinger.jpg"
+        },
+        {
+          "name": "Tower Burger",
+          "description": "Frango crocante, hash brown, queijo e molho especial.",
+          "price": 6.99,
+          "image": "https://example.com/kfc/tower.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Five Guys",
+      "items": [
+        {
+          "name": "Bacon Cheeseburger",
+          "description": "Hambúrguer com bacon, queijo americano e toppings à escolha.",
+          "price": 8.99,
+          "image": "https://example.com/fiveguys/bacon-cheeseburger.jpg"
+        },
+        {
+          "name": "Little Hamburger",
+          "description": "Hambúrguer simples com um hambúrguer e toppings personalizados.",
+          "price": 6.99,
+          "image": "https://example.com/fiveguys/little-hamburger.jpg"
+        }
+      ]
+    }
+  ],
+  "bebidas": [
+    {
+      "brand": "Coca-Cola",
+      "items": [
+        {
+          "name": "Coca-Cola Original",
+          "size": "500ml",
+          "price": 1.99,
+          "image": "https://example.com/coke/original.jpg"
+        },
+        {
+          "name": "Coca-Cola Zero",
+          "size": "500ml",
+          "price": 1.99,
+          "image": "https://example.com/coke/zero.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Pepsi",
+      "items": [
+        {
+          "name": "Pepsi Max",
+          "size": "500ml",
+          "price": 1.89,
+          "image": "https://example.com/pepsi/max.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Lipton",
+      "items": [
+        {
+          "name": "Ice Tea Pêssego",
+          "size": "500ml",
+          "price": 1.89,
+          "image": "https://example.com/lipton/pessego.jpg"
+        }
+      ]
+    },
+    {
+      "brand": "Sprite",
+      "items": [
+        {
+          "name": "Sprite",
+          "size": "500ml",
+          "price": 1.89,
+          "image": "https://example.com/sprite/original.jpg"
+        }
+      ]
+    }
+  ],
+  "complementos": [
+    {
+      "type": "Batatas Fritas",
+      "items": [
+        {
+          "brand": "McDonald's",
+          "name": "Batatas Fritas Média",
+          "description": "Batatas crocantes servidas no ponto.",
+          "price": 2.50,
+          "image": "https://example.com/mcdonalds/fries-medium.jpg"
+        },
+        {
+          "brand": "Five Guys",
+          "name": "Five Guys Style Fries",
+          "description": "Batatas fritas no estilo da casa, com casca.",
+          "price": 3.99,
+          "image": "https://example.com/fiveguys/fries.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Sobremesas",
+      "items": [
+        {
+          "brand": "KFC",
+          "name": "Sundae de Chocolate",
+          "description": "Gelado com cobertura de chocolate.",
+          "price": 1.99,
+          "image": "https://example.com/kfc/sundae-chocolate.jpg"
+        },
+        {
+          "brand": "Burger King",
+          "name": "Tarte de Maçã",
+          "description": "Doce de maçã quente em massa crocante.",
+          "price": 1.50,
+          "image": "https://example.com/bk/apple-pie.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Molhos",
+      "items": [
+        {
+          "brand": "McDonald's",
+          "name": "Molho Barbecue",
+          "description": "Molho barbecue defumado para acompanhar batatas ou nuggets.",
+          "price": 0.50,
+          "image": "https://example.com/mcdonalds/bbq-sauce.jpg"
+        },
+        {
+          "brand": "Burger King",
+          "name": "Molho Curry",
+          "description": "Molho doce e ligeiramente picante.",
+          "price": 0.50,
+          "image": "https://example.com/bk/curry-sauce.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Nuggets",
+      "items": [
+        {
+          "brand": "McDonald's",
+          "name": "McNuggets 6 unidades",
+          "description": "Pedaços de frango empanados crocantes.",
+          "price": 3.99,
+          "image": "https://example.com/mcdonalds/nuggets-6.jpg"
+        },
+        {
+          "brand": "Burger King",
+          "name": "Chicken Nuggets 9 unidades",
+          "description": "Nuggets de frango com molho à escolha.",
+          "price": 4.50,
+          "image": "https://example.com/bk/nuggets-9.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Wraps",
+      "items": [
+        {
+          "brand": "KFC",
+          "name": "Twister Wrap",
+          "description": "Frango crocante, alface, tomate e maionese em wrap.",
+          "price": 4.99,
+          "image": "https://example.com/kfc/twister.jpg"
+        },
+        {
+          "brand": "McDonald's",
+          "name": "Chicken Caesar Wrap",
+          "description": "Frango grelhado, alface e molho césar.",
+          "price": 4.75,
+          "image": "https://example.com/mcdonalds/caesar-wrap.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Saladas",
+      "items": [
+        {
+          "brand": "McDonald's",
+          "name": "Salada Mediterrânea",
+          "description": "Alface, tomate, pepino, cebola roxa e molho vinagrete.",
+          "price": 3.50,
+          "image": "https://example.com/mcdonalds/salad.jpg"
+        },
+        {
+          "brand": "Burger King",
+          "name": "Salada com Frango",
+          "description": "Frango grelhado, mix de folhas e croutons.",
+          "price": 4.20,
+          "image": "https://example.com/bk/chicken-salad.jpg"
+        }
+      ]
+    },
+    {
+      "type": "Cafés",
+      "items": [
+        {
+          "brand": "McDonald's",
+          "name": "Café Expresso",
+          "description": "Café intenso servido quente.",
+          "price": 1.20,
+          "image": "https://example.com/mcdonalds/espresso.jpg"
+        },
+        {
+          "brand": "McDonald's",
+          "name": "Capuccino",
+          "description": "Café com leite vaporizado e espuma cremosa.",
+          "price": 1.80,
+          "image": "https://example.com/mcdonalds/cappuccino.jpg"
+        }
+      ]
+    }
+  ]
+}

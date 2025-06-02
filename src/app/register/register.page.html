@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar style="--background: transparent;">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/login"
+        text=""
+        icon="chevron-back-outline"
+        style="color: #a50d18;"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding register-screen">
+
+
+
+  <div class="page-header">
+    <h2>Registe a sua conta</h2>
+    <p>Crie a sua conta pessoal para ter acesso à aplicação</p>
+  </div>
+
+  <div class="register-container">
+    <ion-input
+      label="Nome"
+      type="text"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="nome"
+    ></ion-input>
+
+    <ion-input
+      label="Email"
+      type="email"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="email"
+    ></ion-input>
+
+    <ion-input
+      label="Password"
+      type="password"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="password"
+    ></ion-input>
+
+    <ion-input
+      label="Confirmar password"
+      type="password"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="confirmarPassword"
+    ></ion-input>
+
+    <ion-button expand="block" color="danger" (click)="registarConta()">
+      Registar Conta
+    </ion-button>
+
+    <div class="divider">
+      <hr /><span>ou</span><hr />
+    </div>
+
+    <ion-button expand="block" fill="outline" (click)="registarComApple()">
+      <ion-icon slot="start" name="logo-apple"></ion-icon>
+      Registar com Apple
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" (click)="registarComGoogle()">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Registar com Google
+    </ion-button>
+
+    <p class="footer-text">
+      Já tem conta criada? <a routerLink="/login">Faça login</a>
+    </p>
+  </div>
+</ion-content>

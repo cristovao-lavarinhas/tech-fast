@@ -1,0 +1,53 @@
+<ion-content class="ion-padding login-screen">
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Tech & Fast Logo" />
+  </div>
+
+
+  <div class="page-header">
+    <h2>Entre na sua conta</h2>
+  </div>
+
+  <div class="login-container">
+    <ion-input
+      label="Email"
+      type="email"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="email"
+    ></ion-input>
+
+    <ion-input
+      label="Password"
+      type="password"
+      fill="outline"
+      labelPlacement="floating"
+      [(ngModel)]="password"
+    ></ion-input>
+
+    <ion-button expand="block" color="danger" (click)="login()">
+      Entrar
+    </ion-button>
+
+
+
+    <div class="divider">
+      <hr /><span>ou</span><hr />
+    </div>
+
+    <ion-button expand="block" fill="outline" (click)="loginComApple()">
+      <ion-icon slot="start" name="logo-apple"></ion-icon>
+      Entrar com Apple
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" (click)="loginComGoogle()">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Entrar com Google
+    </ion-button>
+
+    <p class="footer-text">
+      Ainda não tem conta?
+      <a routerLink="/register">Faça o registo</a>
+    </p>
+  </div>
+</ion-content>

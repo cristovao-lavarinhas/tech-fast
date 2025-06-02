@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar style="--background: #ffffff;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="voltar()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notificações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Promoções</ion-label>
+    <ion-toggle [(ngModel)]="promo"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Atualizações da app</ion-label>
+    <ion-toggle [(ngModel)]="atualizacoes"></ion-toggle>
+  </ion-item>
+</ion-content>

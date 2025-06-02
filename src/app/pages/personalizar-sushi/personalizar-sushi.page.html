@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>PersonalizarPedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="titulo-centro">Menu Sushi - combinado 20pcs</div>
+  <img src="assets/sushi.png" class="imagem-menu" />
+
+  <ion-list>
+    <ion-item *ngFor="let ingrediente of ingredientesSushi">
+      <img [src]="ingrediente.img" slot="start" class="imagem-ingrediente" />
+      <ion-label>{{ ingrediente.nome }}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button fill="clear" (click)="diminuir(ingrediente)">-</ion-button>
+        <span class="quantidade">{{ ingrediente.qtd }}</span>
+        <ion-button fill="clear" (click)="aumentar(ingrediente)">+</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="danger" (click)="concluirSushi()">Concluído</ion-button>
+</ion-content>

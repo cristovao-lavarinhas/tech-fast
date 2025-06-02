@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar style="--background: #ffffff; --color: #000000;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="voltar()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #ffffff;" class="ion-padding">
+    <ion-card style="
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    ">
+    <ion-card-content>
+
+    <ion-textarea
+      placeholder="Envia-nos o teu feedback"
+      rows="6"
+      auto-grow="true"
+      [(ngModel)]="mensagem"
+      style="
+        background: #f5f5f5;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 15px;
+        color: #000;
+        border: 1px solid #ffffff;
+      ">
+    </ion-textarea>
+
+      <ion-button
+        expand="block"
+        class="ion-margin-top"
+        shape="round"
+        color="primary"
+        (click)="enviarMensagem()"
+      >
+        Enviar
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
