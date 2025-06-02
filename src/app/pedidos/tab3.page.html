@@ -1,17 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of pedidos" class="pedido-card">
+    <ion-grid class="pedido-grid">
+      <ion-row class="pedido-row">
+        <!-- Imagem à esquerda, sem margens/padding -->
+        <ion-col size="4" class="pedido-img-col">
+          <img [src]="item.imagem" alt="{{ item.nome }}" class="pedido-img" />
+        </ion-col>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+        <!-- Informação à direita, em grid 2x2 -->
+        <ion-col size="8" class="pedido-details-col">
+          <div class="info-grid">
+            <div class="nome-pedido">{{ item.nome }}</div>
+            <div></div>
+            <div class="preco-pedido">Preço: €{{ item.preco }}</div>
+            <div class="acoes-pedido">
+              <div class="quantidade">
+                <ion-button size="small" (click)="diminuir(item)">-</ion-button>
+                <span>{{ item.quantidade }}</span>
+                <ion-button size="small" (click)="aumentar(item)">+</ion-button>
+              </div>
+              <a [routerLink]="['/personalizar', item.id]" class="link-personalizar">Personalizar</a>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>
+
