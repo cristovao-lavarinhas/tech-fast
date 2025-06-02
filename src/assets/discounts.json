@@ -1,0 +1,17 @@
+{
+  "discounts": [
+    {
+      "title": "Receba 10% de cashback na sua primeira encomenda",
+      "image": "https://example.com/images/discount1.jpg"
+    },
+    {
+      "title": "Receba 10% de desconto SUSHI10",
+      "image": "https://example.com/images/discount2.jpg"
+    },
+    {
+      "title": "Receba 10% de cashback na sua primeira encomenda",
+      "image": "https://example.com/images/discount3.jpg"
+    }
+  ]
+}
+

@@ -1,0 +1,114 @@
+<ion-toolbar class="toolbar-branca">
+  <ion-buttons slot="start">
+    <ion-button fill="clear" color="medium" (click)="voltarParaHome()">
+      <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title style="text-align: center; font-size: 18px; font-weight: bold;">
+    Lojas
+  </ion-title>
+</ion-toolbar>
+
+<ion-content style="--background: #ffffff;">
+
+  <!-- Searchbar com margem e padding -->
+  <div style="padding: 0 16px; margin-top: 16px;">
+    <ion-searchbar
+      placeholder="Pesquisa"
+      showClearButton="always"
+      (ionInput)="filtrar($event)"
+      debounce="300"
+      style="
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        height: 40px;
+        --background: #ffffff;
+        --color: #000;
+        --icon-color: #888;
+        --clear-button-color: #000;
+      ">
+    </ion-searchbar>
+  </div>
+
+  <!-- Aqui estava o problema: este div estava a ser engolido -->
+  <div style="padding: 0 16px;">
+    <h2 style="
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 0 16px 0;
+      color: #000;
+      display: block;
+    ">
+      Estabelecimentos perto de si
+    </h2>
+  </div>
+
+  <!-- Lista de lojas -->
+  <div style="
+    display: flex;
+    justify-content: space-around;
+    padding: 0 16px 32px;
+    text-align: center;
+  ">
+    <!-- McDonald's -->
+    <div>
+      <img src="https://yt3.googleusercontent.com/8m-TH1zgHmwWj51BOXh2pIjBWttFkOkCm62jVma_udxW88EG2nwwy1vgtd7asGceoZWC3cOSSg=s900-c-k-c0x00ffffff-no-rj"
+        style="width: 60px; height: 60px; border-radius: 12px;" />
+      <div style="margin-top: 6px; font-size: 13px; color: #000;">McDonald’s</div>
+    </div>
+
+    <!-- Aldi -->
+    <div>
+      <img src="https://media.licdn.com/dms/image/v2/C560BAQGrXWyXEOvwmQ/company-logo_200_200/company-logo_200_200/0/1638281858836/aldi_portugal_logo?e=2147483647&v=beta&t=skgV5kHjPIj_If6okpMqNRbfI-X3BBFokStYXil_J1A"
+        style="width: 60px; height: 60px; border-radius: 12px; border: 2px solid red;" />
+      <div style="margin-top: 6px; font-size: 13px; color: #000;">Aldi</div>
+    </div>
+
+    <!-- KFC -->
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQLkul1lefYafC5mnqZpRqhbr-bzLj4nTyrg&s"
+        style="width: 60px; height: 60px; border-radius: 12px;" />
+      <div style="margin-top: 6px; font-size: 13px; color: #000;">KFC</div>
+    </div>
+
+    <!-- Continente -->
+    <div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE3KRNDMG62UBxendmaRkSfqqMkftjRjYKkA&s"
+        style="width: 60px; height: 60px; border-radius: 12px;" />
+      <div style="margin-top: 6px; font-size: 13px; color: #000;">Continente</div>
+    </div>
+  </div>
+
+  <div style="padding: 16px;">
+  <div *ngFor="let loja of lojasFiltradas" style="
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    margin-bottom: 16px;
+  ">
+    <img [src]="loja.imagem"
+        style="width: 80px; height: 80px; border-radius: 12px; object-fit: cover; margin-right: 16px;" [alt]="loja.nome"/>
+
+    <div style="flex: 1;">
+      <div style="font-size: 16px; font-weight: 600; color: #000; margin-bottom: 8px;">
+        {{ loja.nome }}
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px; color: #888; font-size: 14px;">
+        <div style="display: flex; align-items: center;">
+          <ion-icon name="star-outline" style="color: #f6c000; font-size: 18px; margin-right: 4px;"></ion-icon>
+          <span>{{ loja.classificacao }}</span>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <ion-icon name="time-outline" style="margin-right: 4px;"></ion-icon>
+          <span>{{ loja.duracao }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</ion-content>

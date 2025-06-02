@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar style="--background: #ffffff; --color: #000000;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" color="medium" (click)="voltar()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title style="text-align: center; font-size: 18px; font-weight: bold;">
+      Conta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #ffffff;">
+  <div style="padding: 24px 16px; display: flex; flex-direction: column; gap: 24px;">
+
+    <div style="display: flex; align-items: center;" (click)="navegar('alterar-dados')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="person-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Alterar dados</span>
+    </div>
+
+    <div style="display: flex; align-items: center;" (click)="navegar('mudar-lingua')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="at-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Mudar língua</span>
+    </div>
+
+    <div style="display: flex; align-items: center;" (click)="navegar('suporte')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="help-circle-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Suporte</span>
+    </div>
+
+    <div style="display: flex; align-items: center;" (click)="navegar('notificacoes')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="notifications-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Notificações</span>
+    </div>
+
+    <div style="display: flex; align-items: center;" (click)="navegar('feedback')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="chatbubble-ellipses-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Feedback</span>
+    </div>
+
+    <div style="display: flex; align-items: center;" (click)="navegar('logout')">
+      <div style="background: #f2f2f2; border-radius: 50%; padding: 12px; margin-right: 16px;">
+        <ion-icon name="log-out-outline" style="font-size: 20px; color: #444;"></ion-icon>
+      </div>
+      <span style="font-size: 16px; font-weight: 500; color: #222;">Sair da conta</span>
+    </div>
+
+  </div>
+</ion-content>
