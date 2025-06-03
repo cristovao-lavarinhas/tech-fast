@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/conta"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pontos e Ofertas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="pontos-box">
+    <h2>Os teus Pontos</h2>
+    <div class="pontos-numero">{{ pontos }}</div>
+  </div>
+
+  <h3 style="margin-left: 12px; margin-top: 24px;">Ofertas Disponíveis</h3>
+
+  <ion-list>
+    <div *ngFor="let oferta of ofertas" class="card-wrapper">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img
+            [src]="oferta.image"
+            alt="oferta image"
+            onerror="this.src='assets/placeholder.jpg'"
+          />
+        </ion-thumbnail>
+        <ion-label>
+          <div>{{ oferta.title }}</div>
+          <div class="pontos-custo">{{ oferta.pontos }} pontos</div>
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
+

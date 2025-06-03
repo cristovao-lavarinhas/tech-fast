@@ -1,6 +1,13 @@
 ion-header {
   margin-bottom: 20px;
 }
+ion-toolbar ion-title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
 
 .pedido-card {
   padding: 0;

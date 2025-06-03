@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'language',
     loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
-  }
+  },
+  {
+    path: 'pontos',
+    loadChildren: () => import('./pontos/pontos.module').then( m => m.PontosPageModule)
+  },
 
 ];
 
